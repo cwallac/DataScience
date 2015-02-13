@@ -1496,6 +1496,14 @@ class Pdf(object):
     def Render(self, **options):
         """Generates a sequence of points suitable for plotting.
 
+        If options includes low and high, it must also include n;
+        in that case the density is evaluated an n locations between
+        low and high, including both.
+
+        If options includes xs, the density is evaluate at those location.
+
+        Otherwise, self.GetLinspace is invoked to provide the locations.
+
         Returns:
             tuple of (xs, densities)
         """
@@ -2160,12 +2168,12 @@ def Jitter(values, jitter=0.5):
     return np.random.uniform(-jitter, +jitter, n) + values
 
 
-def NormalProbabilityPlot(sample, label=None, fit_color='0.8'):
+def NormalProbabilityPlot(sample, fit_color='0.8', **options):
     """Makes a normal probability plot with a fitted line.
 
     sample: sequence of numbers
-    label: string label for the data
     fit_color: color string for the fitted line
+    options: passed along to Plot
     """
     xs, ys = NormalProbability(sample)
     mean, var = MeanVar(sample)
@@ -2175,7 +2183,7 @@ def NormalProbabilityPlot(sample, label=None, fit_color='0.8'):
     thinkplot.Plot(*fit, color=fit_color, label='model')
 
     xs, ys = NormalProbability(sample)
-    thinkplot.Plot(xs, ys, label=label)
+    thinkplot.Plot(xs, ys, **options)
 
  
 def Mean(xs):

@@ -26,3 +26,4 @@ others_values=others.AV_LAND
 thinkplot.Scatter(others_footage,others_values,marker=".")
 #thinkplot.HexBin(others_footage,others_values)
 thinkplot.Show(label="blarg",xlabel="Footage",ylabel="Value")
+
