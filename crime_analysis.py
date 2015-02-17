@@ -79,7 +79,10 @@ def createGeograph(df):
 
 	mymap.draw('Plots/mymap.html')
 
-
+def testPmf(df):
+	crime_pmf=thinkstats2.Pmf(df["INCIDENT_TYPE_DESCRIPTION"])
+	thinkplot.Pmf(crime_pmf, width=1)
+	thinkplot.Show()
 
 
 
@@ -96,4 +99,5 @@ df=pandas.DataFrame.from_csv("Data/Crime_Incident_Reports.csv")
 # createMonthlyCrime(df)
 # createCrimeType(df)
 # createDailyCrime(df)
-createGeograph(df)
+# createGeograph(df)
+testPmf(df)
