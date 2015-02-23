@@ -1,0 +1,190 @@
+State Code,County Code,2010 Census Tract,GEOID10,Census Tabulation Tract Name,2010 Census name and the translated legal/statistical area description for county,Land Area in Square Meters,Water Area in Square Meters,Planning Districts,Neighborhoods
+25,025,000703,25025000703,7.03,Census Tract 7.03,"178,020",0,Allston/Brighton,Allston
+25,025,000504,25025000504,5.04,Census Tract 5.04,"333,187",0,Allston/Brighton,Brighton
+25,025,000704,25025000704,7.04,Census Tract 7.04,"239,781",0,Allston/Brighton,Allston
+25,025,000803,25025000803,8.03,Census Tract 8.03,"1,158,191",0,Allston/Brighton,Allston
+25,025,000302,25025000302,3.02,Census Tract 3.02,"589,888","46,101",Allston/Brighton,Brighton
+25,025,000301,25025000301,3.01,Census Tract 3.01,"572,307",0,Allston/Brighton,Brighton
+25,025,981501,25025981501,9815.01,Census Tract 9815.01,"915,439","1,178,787",Back Bay/Beacon Hill,Fenway
+25,025,000503,25025000503,5.03,Census Tract 5.03,"139,156",0,Allston/Brighton,Brighton
+25,025,000802,25025000802,8.02,Census Tract 8.02,"977,475",0,Allston/Brighton,Allston
+25,025,000701,25025000701,7.01,Census Tract 7.01,"230,433",0,Allston/Brighton,Brighton
+25,025,000602,25025000602,6.02,Census Tract 6.02,"599,777",0,Allston/Brighton,Brighton
+25,025,000601,25025000601,6.01,Census Tract 6.01,"495,044",0,Allston/Brighton,Brighton
+25,025,000502,25025000502,5.02,Census Tract 5.02,"863,889","334,529",Allston/Brighton,Brighton
+25,025,000402,25025000402,4.02,Census Tract 4.02,"806,765",0,Allston/Brighton,Brighton
+25,025,000401,25025000401,4.01,Census Tract 4.01,"431,043",0,Allston/Brighton,Brighton
+25,025,000202,25025000202,2.02,Census Tract 2.02,"601,637",0,Allston/Brighton,Brighton
+25,025,000201,25025000201,2.01,Census Tract 2.01,"599,378",0,Allston/Brighton,Brighton
+25,025,000100,25025000100,1,Census Tract 1,"1,794,942",0,Allston/Brighton,Brighton
+25,025,010801,25025010801,108.01,Census Tract 108.01,"127,905",0,Back Bay/Beacon Hill,Back Bay
+25,025,010702,25025010702,107.02,Census Tract 107.02,"299,981",0,Back Bay/Beacon Hill,Back Bay
+25,025,010802,25025010802,108.02,Census Tract 108.02,"155,467",0,Back Bay/Beacon Hill,Back Bay
+25,025,981700,25025981700,9817,Census Tract 9817,"314,777","14,973",Back Bay/Beacon Hill,Beacon Hill
+25,025,010701,25025010701,107.01,Census Tract 107.01,"202,317",0,Back Bay/Beacon Hill,Back Bay
+25,025,020200,25025020200,202,Census Tract 202,"116,893",0,Back Bay/Beacon Hill,Beacon Hill
+25,025,010600,25025010600,106,Census Tract 106,"339,505",0,Back Bay/Beacon Hill,Back Bay
+25,025,020302,25025020302,203.02,Census Tract 203.02,"76,782",0,Back Bay/Beacon Hill,Beacon Hill
+25,025,020101,25025020101,201.01,Census Tract 201.01,"223,142",0,Back Bay/Beacon Hill,Beacon Hill
+25,025,070300,25025070300,703,Census Tract 703,"336,063",0,Central,South End
+25,025,070200,25025070200,702,Census Tract 702,"268,778",0,Central,Downtown
+25,025,070101,25025070101,701.01,Census Tract 701.01,"1,019,135","89,007",Central,Downtown
+25,025,030500,25025030500,305,Census Tract 305,"190,734","292,691",Central,North End
+25,025,030400,25025030400,304,Census Tract 304,"108,635",0,Central,North End
+25,025,030300,25025030300,303,Census Tract 303,"691,377","234,496",Central,Downtown
+25,025,030200,25025030200,302,Census Tract 302,"66,711",0,Central,North End
+25,025,030100,25025030100,301,Census Tract 301,"76,346",0,Central,North End
+25,025,020303,25025020303,203.03,Census Tract 203.03,"448,840","78,767",Central,Downtown
+25,025,020301,25025020301,203.01,Census Tract 203.01,"256,258",328,Central,West End
+25,025,040801,25025040801,408.01,Census Tract 408.01,"952,430","752,502",Charlestown,Charlestown
+25,025,040300,25025040300,403,Census Tract 403,"280,098",0,Charlestown,Charlestown
+25,025,040200,25025040200,402,Census Tract 402,"143,569",0,Charlestown,Charlestown
+25,025,040100,25025040100,401,Census Tract 401,"259,341","64,873",Charlestown,Charlestown
+25,025,040600,25025040600,406,Census Tract 406,"1,426,899","420,711",Charlestown,Charlestown
+25,025,040401,25025040401,404.01,Census Tract 404.01,"429,844","28,580",Charlestown,Charlestown
+25,025,981300,25025981300,9813,Census Tract 9813,"7,157,254","2,015,092",East Boston,East Boston
+25,025,981502,25025981502,9815.02,Census Tract 9815.02,"1,252,250","27,493",East Boston,East Boston
+25,025,051200,25025051200,512,Census Tract 512,"412,098","496,108",East Boston,East Boston
+25,025,050700,25025050700,507,Census Tract 507,"271,727",0,East Boston,East Boston
+25,025,050600,25025050600,506,Census Tract 506,"169,229",0,East Boston,East Boston
+25,025,050500,25025050500,505,Census Tract 505,"114,773",0,East Boston,East Boston
+25,025,050400,25025050400,504,Census Tract 504,"131,979",0,East Boston,East Boston
+25,025,050300,25025050300,503,Census Tract 503,"355,328","364,097",East Boston,East Boston
+25,025,050200,25025050200,502,Census Tract 502,"243,272",0,East Boston,East Boston
+25,025,981600,25025981600,9816,Census Tract 9816,"586,984","158,872",East Boston,East Boston
+25,025,051101,25025051101,511.01,Census Tract 511.01,"1,159,406","623,214",East Boston,East Boston
+25,025,051000,25025051000,510,Census Tract 510,"1,044,305","210,152",East Boston,East Boston
+25,025,050101,25025050101,501.01,Census Tract 501.01,"299,772","184,516",East Boston,East Boston
+25,025,050901,25025050901,509.01,Census Tract 509.01,"614,932","194,139",East Boston,East Boston
+25,025,010405,25025010405,104.05,Census Tract 104.05,"363,702",0,Fenway/Kenmore,Fenway
+25,025,010404,25025010404,104.04,Census Tract 104.04,"136,829",0,Fenway/Kenmore,Fenway
+25,025,010204,25025010204,102.04,Census Tract 102.04,"254,706",0,Fenway/Kenmore,Fenway
+25,025,010104,25025010104,101.04,Census Tract 101.04,"279,354","7,377",Fenway/Kenmore,Fenway
+25,025,010103,25025010103,101.03,Census Tract 101.03,"273,032",0,Fenway/Kenmore,Fenway
+25,025,981800,25025981800,9818,Census Tract 9818,"703,274","393,640",Jamaica Plain,Jamaica Plain
+25,025,010203,25025010203,102.03,Census Tract 102.03,"365,106","1,185",Fenway/Kenmore,Fenway
+25,025,010408,25025010408,104.08,Census Tract 104.08,"43,381",0,Fenway/Kenmore,Fenway
+25,025,010500,25025010500,105,Census Tract 105,"188,533","10,075",Fenway/Kenmore,Back Bay
+25,025,010300,25025010300,103,Census Tract 103,"509,208",0,Fenway/Kenmore,Longwood Medical Area
+25,025,010403,25025010403,104.03,Census Tract 104.03,"88,556",0,Fenway/Kenmore,Fenway
+25,025,980101,25025980101,9801.01,Census Tract 9801.01,"3,191,250","5,488,830",Harbor Islands,Harbor Islands
+25,025,140400,25025140400,1404,Census Tract 1404,"1,878,139","12,733",Hyde Park,Hyde Park
+25,025,140300,25025140300,1403,Census Tract 1403,"1,547,361","41,485",Hyde Park,Hyde Park
+25,025,140201,25025140201,1402.01,Census Tract 1402.01,"1,329,071","86,300",Hyde Park,Hyde Park
+25,025,140202,25025140202,1402.02,Census Tract 1402.02,"1,538,700","17,101",Hyde Park,Hyde Park
+25,025,140102,25025140102,1401.02,Census Tract 1401.02,"2,080,064","75,318",Hyde Park,Hyde Park
+25,025,140105,25025140105,1401.05,Census Tract 1401.05,"1,010,909",0,Hyde Park,Hyde Park
+25,025,980700,25025980700,9807,Census Tract 9807,"2,887,914","53,081",Hyde Park,Hyde Park
+25,025,140107,25025140107,1401.07,Census Tract 1401.07,"627,360",0,Hyde Park,Hyde Park
+25,025,120201,25025120201,1202.01,Census Tract 1202.01,"719,468",0,Jamaica Plain,Jamaica Plain
+25,025,120104,25025120104,1201.04,Census Tract 1201.04,"290,296",0,Jamaica Plain,Jamaica Plain
+25,025,120700,25025120700,1207,Census Tract 1207,"297,485",0,Jamaica Plain,Jamaica Plain
+25,025,120600,25025120600,1206,Census Tract 1206,"258,212",0,Jamaica Plain,Jamaica Plain
+25,025,120500,25025120500,1205,Census Tract 1205,"213,705",0,Jamaica Plain,Jamaica Plain
+25,025,120400,25025120400,1204,Census Tract 1204,"998,928",0,Jamaica Plain,Jamaica Plain
+25,025,120105,25025120105,1201.05,Census Tract 1201.05,"1,837,989","2,474",Jamaica Plain,Jamaica Plain
+25,025,981000,25025981000,9810,Census Tract 9810,"1,126,260","4,754",Jamaica Plain,Jamaica Plain
+25,025,081200,25025081200,812,Census Tract 812,"282,374",0,Jamaica Plain,Jamaica Plain
+25,025,081100,25025081100,811,Census Tract 811,"495,877",0,Jamaica Plain,Mission Hill
+25,025,080900,25025080900,809,Census Tract 809,"256,667",0,Jamaica Plain,Mission Hill
+25,025,080801,25025080801,808.01,Census Tract 808.01,"364,700",0,Jamaica Plain,Mission Hill
+25,025,120103,25025120103,1201.03,Census Tract 1201.03,"353,248",0,Jamaica Plain,Jamaica Plain
+25,025,081001,25025081001,810.01,Census Tract 810.01,"558,488",0,Jamaica Plain,Mission Hill
+25,025,101102,25025101102,1011.02,Census Tract 1011.02,"561,244",0,Mattapan,Mattapan
+25,025,101101,25025101101,1011.01,Census Tract 1011.01,"379,768",0,Mattapan,Mattapan
+25,025,101002,25025101002,1010.02,Census Tract 1010.02,"1,165,212","4,369",Mattapan,Mattapan
+25,025,101001,25025101001,1010.01,Census Tract 1010.01,"1,296,283","5,844",Mattapan,Mattapan
+25,025,100900,25025100900,1009,Census Tract 1009,"955,495","45,716",Mattapan,Mattapan
+25,025,100300,25025100300,1003,Census Tract 1003,"491,879",0,Mattapan,Dorchester
+25,025,100200,25025100200,1002,Census Tract 1002,"350,592",0,Mattapan,Dorchester
+25,025,100100,25025100100,1001,Census Tract 1001,"1,037,011",874,Mattapan,Dorchester
+25,025,981100,25025981100,9811,Census Tract 9811,"2,713,614","19,091",Mattapan,Mattapan
+25,025,091001,25025091001,910.01,Census Tract 910.01,"1,186,620","449,817",North Dorchester,Dorchester
+25,025,091500,25025091500,915,Census Tract 915,"404,166",0,North Dorchester,Dorchester
+25,025,091400,25025091400,914,Census Tract 914,"325,020",0,North Dorchester,Dorchester
+25,025,091300,25025091300,913,Census Tract 913,"262,560",0,North Dorchester,Dorchester
+25,025,091200,25025091200,912,Census Tract 912,"323,612",0,North Dorchester,Dorchester
+25,025,091100,25025091100,911,Census Tract 911,"423,899",0,North Dorchester,Dorchester
+25,025,090700,25025090700,907,Census Tract 907,"1,072,571",0,North Dorchester,Dorchester
+25,025,090901,25025090901,909.01,Census Tract 909.01,"1,173,062","349,466",North Dorchester,Dorchester
+25,025,110607,25025110607,1106.07,Census Tract 1106.07,"1,171,287",0,Roslindale,Roslindale
+25,025,110502,25025110502,1105.02,Census Tract 1105.02,"684,298",0,Roslindale,Roslindale
+25,025,110501,25025110501,1105.01,Census Tract 1105.01,"647,848",0,Roslindale,Roslindale
+25,025,110401,25025110401,1104.01,Census Tract 1104.01,"522,448",0,Roslindale,Roslindale
+25,025,110403,25025110403,1104.03,Census Tract 1104.03,"942,869","7,697",Roslindale,Roslindale
+25,025,110201,25025110201,1102.01,Census Tract 1102.01,"348,208",0,Roslindale,Roslindale
+25,025,110103,25025110103,1101.03,Census Tract 1101.03,"935,088",0,Roslindale,Jamaica Plain
+25,025,110301,25025110301,1103.01,Census Tract 1103.01,"817,929",0,Roslindale,Roslindale
+25,025,140106,25025140106,1401.06,Census Tract 1401.06,"279,850","3,116",Roslindale,Roslindale
+25,025,980300,25025980300,9803,Census Tract 9803,"2,075,986","27,540",Roxbury,Roxbury
+25,025,092400,25025092400,924,Census Tract 924,"594,010",0,Roxbury,Dorchester
+25,025,120301,25025120301,1203.01,Census Tract 1203.01,"662,925",0,Roxbury,Jamaica Plain
+25,025,090600,25025090600,906,Census Tract 906,"301,664",0,Roxbury,Roxbury
+25,025,090400,25025090400,904,Census Tract 904,"425,135",0,Roxbury,Roxbury
+25,025,090300,25025090300,903,Census Tract 903,"380,394",0,Roxbury,Dorchester
+25,025,090200,25025090200,902,Census Tract 902,"273,671",0,Roxbury,Dorchester
+25,025,090100,25025090100,901,Census Tract 901,"446,992",0,Roxbury,Dorchester
+25,025,082100,25025082100,821,Census Tract 821,"370,577",0,Roxbury,Roxbury
+25,025,082000,25025082000,820,Census Tract 820,"392,158",0,Roxbury,Roxbury
+25,025,081900,25025081900,819,Census Tract 819,"433,385",0,Roxbury,Roxbury
+25,025,081800,25025081800,818,Census Tract 818,"373,920",0,Roxbury,Roxbury
+25,025,081700,25025081700,817,Census Tract 817,"633,564",0,Roxbury,Roxbury
+25,025,081500,25025081500,815,Census Tract 815,"336,293",0,Roxbury,Roxbury
+25,025,081400,25025081400,814,Census Tract 814,"620,481",0,Roxbury,Roxbury
+25,025,081300,25025081300,813,Census Tract 813,"580,338",0,Roxbury,Roxbury
+25,025,080601,25025080601,806.01,Census Tract 806.01,"560,163",0,Roxbury,Roxbury
+25,025,080401,25025080401,804.01,Census Tract 804.01,"440,468",0,Roxbury,Roxbury
+25,025,080300,25025080300,803,Census Tract 803,"268,832",0,Roxbury,Roxbury
+25,025,080100,25025080100,801,Census Tract 801,"1,026,391",0,Roxbury,Roxbury
+25,025,981201,25025981201,9812.01,Census Tract 9812.01,"786,643","1,328,333",South Boston,South Boston
+25,025,061101,25025061101,611.01,Census Tract 611.01,"165,282",0,South Boston,South Boston
+25,025,061200,25025061200,612,Census Tract 612,"1,841,489","72,450",South Boston,South Boston
+25,025,061000,25025061000,610,Census Tract 610,"173,037",0,South Boston,South Boston
+25,025,060800,25025060800,608,Census Tract 608,"341,227",0,South Boston,South Boston
+25,025,060700,25025060700,607,Census Tract 607,"128,228",0,South Boston,South Boston
+25,025,060301,25025060301,603.01,Census Tract 603.01,"272,518",0,South Boston,South Boston
+25,025,060101,25025060101,601.01,Census Tract 601.01,"295,623",0,South Boston,South Boston
+25,025,060600,25025060600,606,Census Tract 606,"1,260,969","632,511",South Boston,South Boston Waterfront
+25,025,060400,25025060400,604,Census Tract 604,"399,278",0,South Boston,South Boston
+25,025,060200,25025060200,602,Census Tract 602,"170,386",0,South Boston,South Boston
+25,025,060501,25025060501,605.01,Census Tract 605.01,"411,742",0,South Boston,South Boston
+25,025,981202,25025981202,9812.02,Census Tract 9812.02,"1,594,870","933,939",South Boston,South Boston Waterfront
+25,025,100800,25025100800,1008,Census Tract 1008,"1,765,783","141,896",South Dorchester,Dorchester
+25,025,100601,25025100601,1006.01,Census Tract 1006.01,"552,585",0,South Dorchester,Dorchester
+25,025,100500,25025100500,1005,Census Tract 1005,"858,932",0,South Dorchester,Dorchester
+25,025,100400,25025100400,1004,Census Tract 1004,"626,173",0,South Dorchester,Dorchester
+25,025,092300,25025092300,923,Census Tract 923,"342,974",0,South Dorchester,Dorchester
+25,025,092200,25025092200,922,Census Tract 922,"581,304",0,South Dorchester,Dorchester
+25,025,092000,25025092000,920,Census Tract 920,"489,737",0,South Dorchester,Dorchester
+25,025,091900,25025091900,919,Census Tract 919,"481,985",0,South Dorchester,Dorchester
+25,025,091800,25025091800,918,Census Tract 918,"432,061",0,South Dorchester,Dorchester
+25,025,091700,25025091700,917,Census Tract 917,"289,325",0,South Dorchester,Dorchester
+25,025,091600,25025091600,916,Census Tract 916,"312,698",0,South Dorchester,Dorchester
+25,025,100700,25025100700,1007,Census Tract 1007,"1,203,877","173,339",South Dorchester,Dorchester
+25,025,100603,25025100603,1006.03,Census Tract 1006.03,"886,469","343,678",South Dorchester,Dorchester
+25,025,092101,25025092101,921.01,Census Tract 921.01,"1,291,966","64,101",South Dorchester,Dorchester
+25,025,071201,25025071201,712.01,Census Tract 712.01,"402,228",0,South End,South End
+25,025,080500,25025080500,805,Census Tract 805,"245,570",0,South End,Roxbury
+25,025,071101,25025071101,711.01,Census Tract 711.01,"362,769",0,South End,South End
+25,025,070900,25025070900,709,Census Tract 709,"167,469",0,South End,South End
+25,025,070800,25025070800,708,Census Tract 708,"194,390",0,South End,South End
+25,025,070700,25025070700,707,Census Tract 707,"164,131",0,South End,South End
+25,025,070600,25025070600,706,Census Tract 706,"132,532",0,South End,South End
+25,025,070500,25025070500,705,Census Tract 705,"297,278",0,South End,South End
+25,025,070402,25025070402,704.02,Census Tract 704.02,"267,664","10,223",South End,South End
+25,025,130402,25025130402,1304.02,Census Tract 1304.02,"2,103,293","169,597",West Roxbury,West Roxbury
+25,025,130300,25025130300,1303,Census Tract 1303,"1,442,181",0,West Roxbury,West Roxbury
+25,025,130200,25025130200,1302,Census Tract 1302,"1,352,655",0,West Roxbury,West Roxbury
+25,025,130100,25025130100,1301,Census Tract 1301,"4,344,387","45,805",West Roxbury,West Roxbury
+25,025,110601,25025110601,1106.01,Census Tract 1106.01,"1,406,583","8,282",West Roxbury,West Roxbury
+25,025,130404,25025130404,1304.04,Census Tract 1304.04,"1,602,605","35,273",West Roxbury,West Roxbury
+25,025,130406,25025130406,1304.06,Census Tract 1304.06,"1,048,780","5,879",West Roxbury,West Roxbury
+25,025,990101,25025990101,9901.01,Census Tract 9901.01,0,"134,592,489",,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+"Note: For our 2010 Census reports, Planning Districts and Neighborhoods were defined by Census Blocks.  However, the vast majority of ACS data are only available at the Tract level.  ",,,,,,,,,
+"When Census Tracts were split by Planning District or Neighborhood boundaries, 2010 Census Block data were consulted.  In each case, the Census Tract was assigned to the Planning District ",,,,,,,,,
+or Neighborhood where the higher concentration of residents lived at the Block level in 2010.  Census Tract 981502 (highlighted above) is partially in East Boston and partially in Revere.  When  ,,,,,,,,,
+"aggregating ACS data for the American Fact Finder website, the Census Bureau assigned the entire population of this tract to Revere.  As a result, we exclude tract 981502 from our aggregations of ACS data ",,,,,,,,,
+"for East Boston.  Census Tract 990101 is unassigned to a Planning District or Neighborhood.  As a result, the aggregate of all Planning District and Neighborhood data may not equal the total for Boston.",,,,,,,,,

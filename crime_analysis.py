@@ -77,7 +77,7 @@ def createGeograph(df):
 			mymap.addpoint(lat, lon, "#0000FF")
 		a+=1
 
-	mymap.draw('Plots/mymap.html')
+	mymap.draw('Plots/CrimeMap.html')
 
 def testPmf(df):
 	crime_pmf=thinkstats2.Pmf(df["INCIDENT_TYPE_DESCRIPTION"])

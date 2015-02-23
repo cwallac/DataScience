@@ -30,18 +30,50 @@ def moneyToNum(money_series):
 			print("Malformed: "+el)
 	return new_monies
 
-def create_school_earn_chart(df):
-	school_emps=df[df["DEPARTMENT"]=="Boston Public Schools"]
-	fire_emps=df[df["DEPARTMENT"]=="Boston Fire Department"]
-	police_emps=df[df["DEPARTMENT"]=="Boston Police Department"]
-	
-	monies=school_emps["TOTAL EARNINGS"]
+def make_cdf_from_dep(dep_string):
+	dep_data=df[df["DEPARTMENT"]==dep_string]
+	monies=dep_data["TOTAL EARNINGS"]
 	recoded_monies=moneyToNum(monies)
-	money_cdf=thinkstats2.Cdf(recoded_monies)
-	thinkplot.Cdf(money_cdf)
-	thinkplot.Show(xlabel="Monies",ylabel="Cumulative Probability",title="Cumulative Probabiity of Boston Public School Employee Earnings 2013")
+	return thinkstats2.Cdf(recoded_monies)
+
+def create_school_earn_chart(df):
+	schools=make_cdf_from_dep("Boston Public Schools")
+	fire=make_cdf_from_dep("Boston Fire Department")
+	police=make_cdf_from_dep("Boston Police Department")
+
+	thinkplot.Cdf(schools,label="Public Schools",color="#000000")
+	thinkplot.Cdf(fire,label="Fire Department",color="#FF0000")
+	thinkplot.Cdf(police,label="Police Department")
+	thinkplot.Save("Plots/EmployeeEarnings2013",formats=["png"],legend=True,xlabel="Total Earnings",ylabel="Cumulative Probability",title="Cumulative Probability of Boston Employee Earnings 2013")
+
+	#thinkplot.Show(legend=True,xlabel="Total Earnings",ylabel="Cumulative Probability",title="Cumulative Probability of Boston Employee Earnings 2013")
+
+def estimate_school_earn(df):
+	school=make_cdf_from_dep("Boston Public Schools")
+	actual_mean=school.Mean()
+	means=[]
+	for i in range(200):
+		sample=school.Sample(2000)
+		mean=thinkstats2.Mean(sample)
+		means.append(mean)
+
+	sample_dist=thinkstats2.Cdf(means)
+
+	#How accurate is my estimate of the statistic
+	#How big is the range I am likely to see my statistic fall in
+
+	print("standard error: "+str(thinkstats2.Std(means)))
+	print("mean of mean: "+str(thinkstats2.Mean(means)))
+	print("actual mean: "+str(actual_mean))
+	print("90 CI: "+str(sample_dist.CredibleInterval()))
+
+	thinkplot.Cdf(sample_dist)
+	#thinkplot.Cdf(sample_dist,label="sampled")
+	thinkplot.Show(legend=True)
+
 
 
 df=pandas.DataFrame.from_csv("Data/Employee_Earnings_Report_2013.csv")
 # create_depart_chart(df)
-create_school_earn_chart(df)
+# create_school_earn_chart(df)
+estimate_school_earn(df)
