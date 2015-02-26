@@ -25,8 +25,8 @@ class maps:
 	#def addpointcoord(self, coord):
 	#	self.points.append((coord[0],coord[1]))
 
-	def addradpoint(self, lat,lng,rad,color = '#0000FF'):
-		self.radpoints.append((lat,lng,rad,color))
+	def addradpoint(self, lat,lng,rad,color = '#0000FF',opac=.5):
+		self.radpoints.append((lat,lng,rad,color,opac))
 
 	def addpath(self,path,color = '#FF0000'):
 		path.append(color)
@@ -85,7 +85,7 @@ class maps:
 	def drawradpoints(self, f):
 		for rpoint in self.radpoints:
 			path = self.getcycle(rpoint[0:3])
-			self.drawPolygon(f,path,strokeColor=rpoint[3],fillColor=rpoint[3],fillOpacity=.5)
+			self.drawPolygon(f,path,strokeColor=rpoint[3],fillColor=rpoint[3],fillOpacity=rpoint[4])
 
 	def getcycle(self,rpoint):
 		cycle = []
