@@ -3,6 +3,7 @@ import thinkstats2
 import matplotlib.pyplot as plt
 import collections
 import thinkplot
+import numpy as np
 
 def plotDepart(hist):
 	hist=hist.GetDict()
@@ -47,6 +48,40 @@ def create_school_earn_chart(df):
 	thinkplot.Save("Plots/EmployeeEarnings2013",formats=["png"],legend=True,xlabel="Total Earnings",ylabel="Cumulative Probability",title="Cumulative Probability of Boston Employee Earnings 2013")
 
 	#thinkplot.Show(legend=True,xlabel="Total Earnings",ylabel="Cumulative Probability",title="Cumulative Probability of Boston Employee Earnings 2013")
+class EarnTest(thinkstats2.HypothesisTest):
+	def TestStatistic(self,data):
+		group1,group2 =data
+		test_stat=abs(group1.mean()-group2.mean())
+		return test_stat
+
+	def MakeModel(self):
+		group1,group2 =self.data
+		self.n,self.m=len(group1),len(group2)
+		self.pool=np.hstack((group1,group2))
+
+	def RunModel(self):
+		np.random.shuffle(self.pool)
+		data=self.pool[:self.n],self.pool[self.n:]
+		return data
+
+def hypothesis_test(df):
+	#Fire mean is higher than police mean by a bit
+	schools=make_cdf_from_dep("Boston Public Schools")
+	fire=make_cdf_from_dep("Boston Fire Department")
+	police=make_cdf_from_dep("Boston Police Department")
+	fire_list=fire.Values()
+	police_list=police.Values()
+	data=fire_list,police_list
+	ht=EarnTest(data)
+	pvalue=ht.PValue()
+
+	ht.PlotCdf()
+	thinkplot.Show(xlabel="difference in mean (earnings)",ylabel="CDF",title="Hypothesis Testing of Fire agains Police personel")
+
+	print("Mean of fire earnings: "+str(fire.Mean()))
+	print("Mean of police earnings: "+str(police.Mean()))
+	print("P Value: "+str(pvalue))
+
 
 def estimate_school_earn(df):
 	school=make_cdf_from_dep("Boston Public Schools")
@@ -76,4 +111,5 @@ def estimate_school_earn(df):
 df=pandas.DataFrame.from_csv("Data/Employee_Earnings_Report_2013.csv")
 # create_depart_chart(df)
 # create_school_earn_chart(df)
-estimate_school_earn(df)
+# estimate_school_earn(df)
+hypothesis_test(df)
