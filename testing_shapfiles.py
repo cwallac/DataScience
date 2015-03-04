@@ -6,9 +6,15 @@ def get_shapes():
 	# the_shp=open("Data/Shapefiles/Bos_neighborhoods_new.shp","rb")
 	# the_dbf=open("Data/Shapefiles/Bos_neighborhoods_new.dbf","rb")
 	# the_shx=open("Data/Shapefiles/Bos_neighborhoods_new.shx","rb")
-	the_shp=open("Data/Shapefiles/CENSUS2010TRACTS_POLY.shp","rb")
-	the_dbf=open("Data/Shapefiles/CENSUS2010TRACTS_POLY.dbf","rb")
-	the_shx=open("Data/Shapefiles/CENSUS2010TRACTS_POLY.shx","rb")
+	# the_shp=open("Data/Shapefiles/CENSUS2010TRACTS_POLY.shp","rb")
+	# the_dbf=open("Data/Shapefiles/CENSUS2010TRACTS_POLY.dbf","rb")
+	# the_shx=open("Data/Shapefiles/CENSUS2010TRACTS_POLY.shx","rb")
+	# the_shp=open("Data/Shapefiles/CENSUS2010BLOCKGROUPS_POLY.shp","rb")
+	# the_dbf=open("Data/Shapefiles/CENSUS2010BLOCKGROUPS_POLY.dbf","rb")
+	# the_shx=open("Data/Shapefiles/CENSUS2010BLOCKGROUPS_POLY.shx","rb")
+	the_shp=open("Data/Shapefiles/CENSUS2010BLOCKS_POLY.shp","rb")
+	the_dbf=open("Data/Shapefiles/CENSUS2010BLOCKS_POLY.dbf","rb")
+	the_shx=open("Data/Shapefiles/CENSUS2010BLOCKS_POLY.shx","rb")
 	r= pyshp.Reader(shp=the_shp,dbf=the_dbf,shx=the_shx)
 	return r	
 
@@ -31,20 +37,45 @@ def point_in_poly(x,y,poly):
 
     return inside
 
-#x,y are in 
-def convert(x,y):
+#x,y are in state projection
+def convert(x=0,y=0,tup=()):
+    if tup!=():
+        x,y=tup
     p=pyproj.Proj(init="epsg:2805")
     return p(x,y,inverse=True)
 
-
+def plot_shape(mymap,shape):
+    new_points=[]
+    for x,y in shape.points:
+        lon,lat=convert(x,y)
+        # lat,lon=convert(x,y)
+        # print(lat,lon)
+        new_points.append((lat,lon))
+    mymap.addpath(new_points,"#000000")
 
 def plot_shapes(shape_thing):
-    points=shape_thing.shapes()[0].points
-    converted_points=[]
+    mymap = pygmaps.maps(42.3, -71.1, 16)
+    # points=shape_thing.shapes()[0].points
+    # print(len(shape_thing.shapes()))
+    # print(len(shape_thing.records()))
+    print(shape_thing.records()[0])
+    # print(shape_thing.records()[0][9])
 
-    for x,y in points:
-        converted_points.append(convert(x,y))
-    print(converted_points)
+
+# !!!TODO:take in geographic data, test to see if block is in boston by checking block is in geographic data file by id2.
+# Should really write to file when done.
+
+    # # for i in range(len(shape_thing.records())):
+    # for i in range(1):
+    # 	data=shape_thing.records()[i]
+    # 	lat=float(data[9])
+    # 	lon=float(data[10])
+    # 	print (lat)
+    # 	mymap.addradpoint(lat,lon,2000,"#000000")
+
+    # for shape in shape_thing.shapes()[0:1]:
+    #      plot_shape(mymap,shape)
+    # mymap.draw('Plots/TestingShapes.html')
 
 shapes=get_shapes()
 plot_shapes(shapes)
