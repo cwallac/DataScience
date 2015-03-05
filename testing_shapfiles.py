@@ -1,6 +1,8 @@
 import shapefile as pyshp
 import modified_pygmaps as pygmaps
 import pyproj
+import pandas
+import pickle
 
 def get_shapes():
 	# the_shp=open("Data/Shapefiles/Bos_neighborhoods_new.shp","rb")
@@ -16,6 +18,7 @@ def get_shapes():
 	the_dbf=open("Data/Shapefiles/CENSUS2010BLOCKS_POLY.dbf","rb")
 	the_shx=open("Data/Shapefiles/CENSUS2010BLOCKS_POLY.shx","rb")
 	r= pyshp.Reader(shp=the_shp,dbf=the_dbf,shx=the_shx)
+	print("Read shapefile")
 	return r	
 
 def point_in_poly(x,y,poly):
@@ -53,13 +56,61 @@ def plot_shape(mymap,shape):
         new_points.append((lat,lon))
     mymap.addpath(new_points,"#000000")
 
+def check_geoids(geoids,shape_file):
+	records=shape_file.records()
+	G_INDEX=4
+	if shape_file.fields[G_INDEX+1][0]=='GEOID10':
+		print("CHECK")
+	else:
+		print("INVALID")
+#154621
+#8841
+	to_return=[]
+	indexes=[]
+	i=123204
+	j=0
+	print(shape_file.records()[123214][G_INDEX])
+	for record in shape_file.records()[123204:134510]:
+		if int(record[G_INDEX]) in geoids:
+			indexes.append(i)
+		i+=1
+
+	# to_return.append(shape_file.shapes()[i])
+		
+	
+	print("max "+str(max(indexes)))
+	print("min "+str(min(indexes)))
+	print(len(indexes))
+
+	pickle_file=open("Data/pickle_shape.p","wb")
+	shapes=shape_file.shapes()
+	i=0
+	for index in indexes:
+		to_return.append((records[index][G_INDEX],shapes[index].points))
+		i+=1
+	pickle.dump(to_return,pickle_file)
+
+
+	# print(shape_file.fields)
+	# print(type(shape_file.records()[3][3]))
+	# print(shape_file.records()[4])
+
+def print_status(cur,total):
+	print(str(cur/total))
+
+def read_geo():
+    df=pandas.DataFrame.from_csv("Data/Census_GEOID.csv")
+    print("Read Geoid File")
+    return df.index.get_values()
+
 def plot_shapes(shape_thing):
     mymap = pygmaps.maps(42.3, -71.1, 16)
     # points=shape_thing.shapes()[0].points
+    # print(shape_thing.fields)
     # print(len(shape_thing.shapes()))
     # print(len(shape_thing.records()))
-    print(shape_thing.records()[0])
     # print(shape_thing.records()[0][9])
+
 
 
 # !!!TODO:take in geographic data, test to see if block is in boston by checking block is in geographic data file by id2.
@@ -77,8 +128,10 @@ def plot_shapes(shape_thing):
     #      plot_shape(mymap,shape)
     # mymap.draw('Plots/TestingShapes.html')
 
-shapes=get_shapes()
-plot_shapes(shapes)
+shape_file=get_shapes()
+geoids=read_geo()
+check_geoids(geoids,shape_file)
+# plot_shapes(shape_file)
 
 # mymap = pygmaps.maps(42.3, -71.1, 16)
 # mymap.addradpoint(42.3, lon,size, color,opac)
