@@ -105,33 +105,30 @@ def read_geo():
 
 def plot_shapes(shape_thing):
     mymap = pygmaps.maps(42.3, -71.1, 16)
-    # points=shape_thing.shapes()[0].points
-    # print(shape_thing.fields)
-    # print(len(shape_thing.shapes()))
-    # print(len(shape_thing.records()))
-    # print(shape_thing.records()[0][9])
+
+def convert_one(datum):
+	points=datum[1]
+	new_points=[]
+	for pair in points:
+		lat,lon=convert(pair[0],pair[1])
+		new_points.append((lon,lat))
+	return (datum[0],new_points)
+
+def convert_pickle():
+	pickle_file=open("Data/pickle_shape.p","rb")
+	convert_file=open("Data/pickle_convert.p","wb")
+	# pickle file is a list of tuples
+	# each tuple contains geoid and a list of list state proj pairs . 
+	boston_blocks=pickle.load(pickle_file)
+	convert_blocks=[]
+	for block in boston_blocks:
+		convert_blocks.append(convert_one(block))
+	pickle.dump(convert_blocks,convert_file)
+	pickle_file.close()
+	convert_file.close()
 
 
-
-# !!!TODO:take in geographic data, test to see if block is in boston by checking block is in geographic data file by id2.
-# Should really write to file when done.
-
-    # # for i in range(len(shape_thing.records())):
-    # for i in range(1):
-    # 	data=shape_thing.records()[i]
-    # 	lat=float(data[9])
-    # 	lon=float(data[10])
-    # 	print (lat)
-    # 	mymap.addradpoint(lat,lon,2000,"#000000")
-
-    # for shape in shape_thing.shapes()[0:1]:
-    #      plot_shape(mymap,shape)
-    # mymap.draw('Plots/TestingShapes.html')
-
-shape_file=get_shapes()
-geoids=read_geo()
-check_geoids(geoids,shape_file)
-# plot_shapes(shape_file)
-
-# mymap = pygmaps.maps(42.3, -71.1, 16)
-# mymap.addradpoint(42.3, lon,size, color,opac)
+# shape_file=get_shapes()
+# geoids=read_geo()
+# check_geoids(geoids,shape_file)
+convert_pickle()
