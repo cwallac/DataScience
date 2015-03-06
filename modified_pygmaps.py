@@ -13,6 +13,7 @@ class maps:
 		self.paths = []
 		self.points = []
 		self.radpoints = []
+		self.polygons = []
 		self.gridsetting = None
 		self.coloricon = 'http://chart.apis.google.com/chart?cht=mm&chs=12x16&chco=FFFFFF,XXXXXX,000000&ext=.png'
 
@@ -31,6 +32,10 @@ class maps:
 	def addpath(self,path,color = '#FF0000'):
 		path.append(color)
 		self.paths.append(path)
+
+	def addpolygon(self,path,color='#FF0000'):
+		path.append(color)
+		self.polygons.append(path)
 	
 	#create the html file which inlcude one google map and all points and paths
 	def draw(self, htmlfile):
@@ -48,6 +53,7 @@ class maps:
 		self.drawpoints(f)
 		self.drawradpoints(f)
 		self.drawpaths(f,self.paths)
+		self.drawpolygons(f,self.polygons)
 		f.write('\t}\n')
 		f.write('</script>\n')
 		f.write('</head>\n')
@@ -105,6 +111,10 @@ class maps:
 			cycle.append( ( float(y*(180.0/math.pi)),float(x*(180.0/math.pi)) ) )
 		return cycle
 
+	def drawpolygons(self,f,paths):
+		for path in paths:
+			self.drawPolygon(f,path[:-1],strokeColor=path[-1],fillColor=path[-1],fillOpacity=1)
+
 	def drawpaths(self, f, paths):
 		for path in paths:
 			#print path
@@ -125,11 +135,11 @@ class maps:
 
 
 
-	def drawpoint(self,f,lat,lon,color,note="no implementation"):
+	def drawpoint(self,f,lat,lon,color,note='no implementation'):
 		f.write('\t\tvar latlng = new google.maps.LatLng(%f, %f);\n'%(lat,lon))
 		f.write('\t\tvar img = new google.maps.MarkerImage(\'%s\');\n' % (self.coloricon.replace('XXXXXX',color)))
 		f.write('\t\tvar marker = new google.maps.Marker({\n')
-		f.write('\t\ttitle: '+note+',\n')
+		f.write('\t\ttitle: "%s" ,\n'%(note))
 		f.write('\t\ticon: img,\n')
 		f.write('\t\tposition: latlng\n')
 		f.write('\t\t});\n')
